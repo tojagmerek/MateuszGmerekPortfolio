@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+    --mgrey: #eee9e5;
+    --mbeige: #f1edeb;
+    --mgreen: #848f7c;
+    --mgyellow: #BFC6C4;
+}
+
+body {
+    background-color: var(--mgrey);
+}
+
+/* Left Side Bar */
+
+.leftSideBar {
+    width: clamp(15rem, 15vw, 30rem);
+    height: 100vh;
+    background-color: var(--mbeige);
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(1rem, 1vw, 5rem)
+}
+
+.profileHeader img {
+    width: 70%;
+    border-radius: 50%;
+    margin: 7% 0;
+}
