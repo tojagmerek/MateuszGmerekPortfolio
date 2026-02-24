@@ -9,7 +9,7 @@
     --mgrey: #eee9e5;
     --mbeige: #f1edeb;
     --mgreen: #848f7c;
-    --mgyellow: #BFC6C4;
+    --mgyellow: #e1a837;
 }
 
 body {
@@ -111,64 +111,71 @@ h4 {
     border-radius: 10rem;
 }
 
-.languages {
-    display: flex;
-}
-
-.language {
-    padding-right: 2rem;
-}
-
-.language > span {
-    text-align: center;
-}
-
-.ring {
-    --c: #848f7c;
-    width: clamp(2rem, 3.5vw, 6rem);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: conic-gradient(var(--c) calc(var(--p)*1%), #0002 0);
-
-    -webkit-mask:radial-gradient(farthest-side, #0000 calc(100% - 6px), #000 0);
-
-    mask:radial-gradient(farthest-side, #0000 calc(100% - 6px), #000 0);
-
-
-     display:grid;
-     place-items: center;
-}
-
 /* Main Page */
 
 .mainPage {
     width: 100%;
     height: 100dvh;
     background-color: white;
-    margin: 2% 3% 0 3%;
+    margin: 2% 3% 0 0;
+}
+
+.mainPage > h1 {
+    position: absolute;
+    z-index: 1;
+    font-size: clamp(2rem, 3vw, 7rem);
+    margin: 3% 0 3% 6%;
+}
+
+.mainPage__text {
+    position: absolute;
+    z-index: 1;
+    font-size: clamp(1rem, 1.2vw, 5rem);
+    margin: 8% 0 0 6%;
+}
+
+.mainPage__text span:first-child,
+.mainPage__text span:last-child {
+    color: var(--mgyellow);
 }
 
 .backgroundImg {
-    height: clamp(20rem, 17vw, 50rem);
+    height: clamp(15rem, 16vw, 50rem);
     margin: 30 5% 0 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .backgroundImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
+}
+
+.rest {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.space {
+    background-color: var(--mgrey);
+    width: clamp(2rem, 3vw, 5rem);
+    height: 100vh;
+    grid-row: span 2;
 }
 
 .myWork {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 3%;
+    margin: 6% 3% 0 3%;
     gap: 2rem;
 }
 
-.myWork h2 {
-    margin: 2%;
+.rest h2 {
     font-size: clamp(1rem, 2.5vw, 3rem);
+    position: absolute;
+    margin: 1% 0 2% 4%;
 }
 
 .myWork a {
@@ -183,6 +190,7 @@ h4 {
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
+    font-size: clamp(1rem, 1.2vw, 2rem);
 }
 
 .myWork__project img {
@@ -195,4 +203,74 @@ h4 {
 
 .myWork__project h3 {
     margin: 1.5rem 0 1rem 0;
+}
+
+@media (max-width:1300px) {
+    .myWork {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 8% 3% 0 3%;;
+        }
+    .myWork__project {
+        font-size: clamp(1.3rem, 1.4vw, 2rem);
+    }
+    .leftSideBar {
+        width: clamp(15rem, 30vw, 40rem);
+    }
+}
+
+@media (max-width: 800px) {
+    .myWork {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 8% 3% 0 3%;;
+        }
+    .myWork__project {
+        font-size: clamp(1.3rem, 1.7vw, 5rem);
+    }
+    .leftSideBar {
+        width: clamp(15rem, 50vw, 40rem);
+    }
+    .space {
+        width: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .myWork {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 8% 3% 0 3%;;
+        }
+    .myWork__project {
+        font-size: clamp(1.3rem, 1.9vw, 5rem);
+    }
+    .leftSideBar {
+        width: clamp(15rem, 50vw, 40rem);
+        height: auto;
+        width: 100vw;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    h2 {
+        font-size: clamp(2rem, 8vw, 8rem);
+    }
+    h4 {
+        font-size: clamp(2rem, 4vw, 8rem);
+    }
+    span {
+        font-size: clamp(1rem, 18vw, 2rem);
+    }
+    .rest {
+        margin: 0 5%;
+    }
+    .rest h2 {
+        font-size: clamp(1rem, 28vw, 2.5rem);
+    }
+    .mainPage {
+        height: 100%;
+        padding-bottom: 5%;
+    }
+    .myWork {
+        padding: 2% 0;
+    }
 }
