@@ -263,13 +263,19 @@ h4 {
         margin: 8% 3% 0 3%;;
         }
     .myWork__project {
-        font-size: clamp(1.3rem, 1.7vw, 5rem);
+        font-size: clamp(1.3rem, 2vw, 5rem);
     }
     .leftSideBar {
         width: clamp(15rem, 50vw, 40rem);
     }
     .space {
         width: 0;
+    }
+    .myWork__project p {
+        font-size: clamp(2rem, 1.8vw, 10rem);
+    }
+    .myWork__project h3 {
+        font-size: clamp(2rem, 2.3vw, 10rem);
     }
 }
 
@@ -282,7 +288,7 @@ h4 {
         margin: 15% 3% 0 3%;;
         }
     .myWork__project {
-        font-size: clamp(1.3rem, 1.9vw, 5rem);
+        font-size: clamp(1.3rem, 2.3vw, 5rem);
     }
     .leftSideBar {
         width: clamp(15rem, 50vw, 40rem);
