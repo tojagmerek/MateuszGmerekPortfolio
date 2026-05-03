@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,14 @@
 <body>
     <div class="leftSideBar">
         <div class="profileHeader">
-            <img src="assets/img/mainPhoto.jpg" alt="myPhoto">
-            <h2>Matesz Gmerek</h2>
+            <img src="assets/img/mainPhoto.jpg" alt="Zdjęcie profilowe Mateusza Gmarka" aria-label="Zdjęcie profilowe">
+            <h2>Mateusz Gmerek</h2>
         </div>
-        <hr>
         <div class="personalInfo">
+            <p>Student informatyki</p>
             <div>
-                <span>Kraj</span>
-                <span>Polska</span>
-            </div>
-            <div>
-                <span>Miasto</span>
-                <span>Kutno</span>
-            </div>
-            <div>
-                <span>Wiek</span>
-                <span>24</span>
+                <img src="assets/img/pin.svg" alt="pineska" aria-label="Ikona lokalizacji">
+                <span>Kutno / Łódź, Polska</span>
             </div>
         </div>
         <hr>
@@ -33,20 +25,9 @@
             
             <div class="skill">
                 <div class="skill__top">
-                    <span>HTML</span>
-                    <span>80%</span>
+                    <span>HTML + CSS</span>
                 </div>
-                <div class="skill__bar" style="--p: 80%">
-                    <span></span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill__top">
-                    <span>CSS</span>
-                    <span>60%</span>
-                </div>
-                <div class="skill__bar" style="--p: 60%">
+                <div class="skill__bar" style="--p: 90%">
                     <span></span>
                 </div>
             </div>
@@ -54,7 +35,24 @@
             <div class="skill">
                 <div class="skill__top">
                     <span>JS</span>
-                    <span>40%</span>
+                </div>
+                <div class="skill__bar" style="--p: 50%">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill__top">
+                    <span>SQL</span>
+                </div>
+                <div class="skill__bar" style="--p: 50%">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill__top">
+                    <span>C++</span>
                 </div>
                 <div class="skill__bar" style="--p: 40%">
                     <span></span>
@@ -64,41 +62,18 @@
             <div class="skill">
                 <div class="skill__top">
                     <span>React</span>
-                    <span>Uczę się</span>
                 </div>
-                <div class="skill__bar" style="--p: 0%">
+                <div class="skill__bar" style="--p: 10%">
                     <span></span>
                 </div>
             </div>
 
-            <div class="skill">
-                <div class="skill__top">
-                    <span>SQL</span>
-                    <span>30%</span>
-                </div>
-                <div class="skill__bar" style="--p: 30%">
-                    <span></span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill__top">
-                    <span>C++</span>
-                    <span>50%</span>
-                </div>
-                <div class="skill__bar" style="--p: 50%">
-                    <span></span>
-                </div>
-            </div>
-                
         </div>
         <hr>
-        <div class="languages">
+        <div class="contact">
+            <h4>Kontakt</h4>
             
             
-        </div>
-        <div class="aboutMe">
-
         </div>
     </div>
 
@@ -109,37 +84,34 @@
             <span><code>UI, Responsywność</code></span>
             <span><code>&lt;/code&gt;</code></span>
         </div>
-        
+        <a href="./assets/Mateusz_Gmerek_CV.pdf" download class="download">Pobierz CV</a>
+
         <div class="backgroundImg">
-            <img src="assets/img/background3.png" alt="forrestPhoto">
+            <img src="assets/img/background3.png" alt="Tło - las" aria-label="Dekoracyjne tło lasu">
         </div>
         <!-- <div class="experience">No może kiedyś</div> -->
         <div class="rest">
-            <div class="space"></div>
-            <h2>Moje Prace</h2>
-            <div class="myWork">
-
-                <a href="https://tojagmerek.github.io/invitation_generator/"><div class="myWork__project">
-                    <img src="assets/img/3.png" alt="photo of my project">
-                    <h3>Generator Zaproszeń (Work in progress)</progress></h3>
-                    <p>Generator PDF do wydarzeń: użytkownik dodaje gości (w grupach), wpisuje dane wydarzenia, wybiera szablon i czcionkę, a aplikacja generuje zaproszenia, winietki i podziękowania w pliku gotowym do druku.</p>
-                </div></a>
-
-                <a href="https://tojagmerek.github.io/GothicBuild/"><div class="myWork__project">
-                    <img src="assets/img/2.png" alt="photo of my project">
-                    <h3>Gothic 2 Build Planner</h3>
-                    <p>Aplikacja webowa prezentująca interaktywny panel użytkownika inspirowany klasycznym interfejsem RPG. Umożliwia symulowanie rozwoju postaci i natychmiastowe przeliczanie statystyk po zmianach w atrybutach i wyposażeniu. Projekt skupia się na logice biznesowej w JS, pracy na danych (JSON) oraz czytelnym UI.</p>
-                </div></a>
-                
-                <a href="https://tojagmerek.github.io/FirstPortfolio/"><div class="myWork__project">
-                    <img src="assets/img/1.png" alt="photo of my project">
-                    <h3>Pierwsze portfolio</h3>
-                    <p>Poprzednie portfolio na zaliczenie przedmiotu aplikacje intenetowe. Prosty, responsywny layout.</p>
-                </div></a>
-
+            <div class="rest-content">
+                <h2>Moje Prace</h2>
+                <div id="myWork" class="myWork"></div>
             </div>
         </div>
     </div>
+
+    <div class="project-window">
+            <div class="project-window__content">
+                <h2 id="projectTitle"></h2>
+                <button class="close-btn" aria-label="Zamknij okno projektu">&times;</button>
+                <img id="projectImage" src="" alt="Zrzut ekranu projektu" aria-label="Zrzut ekranu projektu">
+                
+                <div id="projectTags" class="project-window__tags"></div>
+                <p id="projectFullDesc"></p>
+                <div class="project-links">
+                    <a id="projectWebUrl" href="#" target="_blank" class="project-link">Zobacz Projekt</a>
+                    <a id="projectGitUrl" href="#" target="_blank" class="project-link">Github</a>
+                </div>
+            </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

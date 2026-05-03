@@ -1,0 +1,45 @@
+{
+    "projects":
+[   
+    {
+        "name": "project4",
+        "title": "Invitation Generator",
+        "shortDesc": "Profesjonalny generator zaproszeń PDF z personalizacją szablonów i zarządzaniem gośćmi.",
+        "fullDesc": "Zaawansowana aplikacja do generowania zaproszeń na wydarzenia. Funkcje: dodawanie gości w grupach, automatyczne wyliczanie liczebności, wybór spośród kilku szablonów, dostosowanie czcionek i kolorów, generowanie winietek i podziękować. Gotowe do wydruku dokumenty PDF.",
+        "image": "assets/img/3.png",
+        "webUrl": "https://tojagmerek.github.io/invitation_generator/",
+        "gitUrl": "https://github.com/tojagmerek/invitation_generator",
+        "tags": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "name": "project3",
+        "title": "Current Portfolio",
+        "shortDesc": "Responsywne portfolio prezentujące projekty i umiejętności front-end developera.",
+        "fullDesc": "Nowoczesne portfolio zbudowane z CSS Grid i Flexbox. Zawiera sekcję z projektami, umiejętnościami, informacje kontaktowe. W pełni responsywne dla wszystkich urządzeń - od mobilnych po ultra-szerokie ekrany 21:9. Interaktywne modalne okna do przeglądania szczegółów projektów.",
+        "image": "assets/img/4.png",
+        "webUrl": "https://tojagmerek.github.io/portfolio",
+        "gitUrl": "https://github.com/tojagmerek/Portfolio",
+        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+    },
+    {
+        "name": "project2",
+        "title": "Gothic 2 Build Planner",
+        "shortDesc": "Interaktywny kalkulator postaci do gry Gothic 2 z rzeczywistym UI inspirowanym grą.",
+        "fullDesc": "Symulator rozwoju postaci dla gry Gothic 2. Użytkownik przydziela punkty do atrybutów, wybiera umiejętności i ekwipunek, a aplikacja natychmiast przelicza statystyki obrażeń, ochrony i możliwości. Interfejs nawiązuje stylem do oryginału gry. Pełna logika biznesowa w JavaScripcie z przechowywaniem danych w JSON.",
+        "image": "assets/img/2.png",
+        "webUrl": "https://tojagmerek.github.io/GothicBuild/",
+        "gitUrl": "https://github.com/tojagmerek/GothicBuild",
+        "tags": ["HTML", "CSS", "JavaScript", "Game Mechanics"]
+    },
+    {
+        "name": "project1",
+        "title": "First Portfolio",
+        "shortDesc": "Projekt zaliczeniowy - responsive portfolio z podstawowymi technologiami web.",
+        "fullDesc": "Pierwsze portfolio stworzone na zaliczenie przedmiotu Aplikacje Internetowe. Prosty, ale elegancki layout zbudowany w HTML i CSS. Zawiera sekcje z danymi osobistymi, umiejętnościami i pracami. Pełna responsywność dla różnych rozmiarów ekranów.",
+        "image": "assets/img/1.png",
+        "webUrl": "https://tojagmerek.github.io/FirstPortfolio/",
+        "gitUrl": "https://github.com/tojagmerek/FirstPortfolio",
+        "tags": ["HTML", "CSS"]
+    }
+]
+}
