@@ -56,13 +56,19 @@ function openProjectWindow(project) {
     document.getElementById('projectImage').src = project.image;
     document.getElementById('projectImage').alt = project.title;
     
-    // Wypełnij tagi technologii
     const tagsContainer = document.getElementById('projectTags');
     tagsContainer.innerHTML = project.tags.map(tag => `<span class="window-tag">${tag}</span>`).join('');
     
     document.getElementById('projectFullDesc').textContent = project.fullDesc;
     document.getElementById('projectWebUrl').href = project.webUrl;
-    document.getElementById('projectGitUrl').href = project.gitUrl;
+    
+    const gitUrlButton = document.getElementById('projectGitUrl');
+    if (project.gitUrl) {
+        gitUrlButton.href = project.gitUrl;
+        gitUrlButton.style.display = 'block';
+    } else {
+        gitUrlButton.style.display = 'none';
+    }
     
     const projectWindow = document.querySelector('.project-window');
     projectWindow.classList.add('active');
