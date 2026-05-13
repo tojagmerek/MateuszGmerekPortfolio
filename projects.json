@@ -23,7 +23,7 @@
         {
             "name": "project3",
             "title": "Aktualne Portfolio",
-            "shortDesc": "Nowoczesne, responsywne portfolio z interaktywnymi modłami i dbałością o każdy detal.",
+            "shortDesc": "Nowoczesne, responsywne portfolio z interaktywnymi modułami i dbałością o każdy detal.",
             "fullDesc": "Moje aktualne portfolio zbudowane z wykorzystaniem CSS Grid i Flexbox. Prezentuje projekty, umiejętności oraz dane kontaktowe w estetyczny i przejrzysty sposób. W pełni responsywne na wszystkich urządzeniach – od telefonu po ultra-szerokie monitory. Zawiera interaktywne okna modalne do szczegółowego przeglądania prac.",
             "image": "assets/img/4.png",
             "webUrl": "https://tojagmerek.github.io/portfolio",
