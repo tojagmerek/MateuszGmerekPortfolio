@@ -99,3 +99,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 loadProjects();
+
+// Hamburger Menu Handler
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const leftSideBar = document.querySelector('.leftSideBar');
+const menuOverlay = document.getElementById('menuOverlay');
+
+if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        leftSideBar.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.hamburger') && !e.target.closest('.leftSideBar')) {
+            hamburgerBtn.classList.remove('active');
+            leftSideBar.classList.remove('active');
+            menuOverlay.classList.remove('active');
+        }
+    });
+}

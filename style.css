@@ -16,7 +16,9 @@ body {
     background-color: var(--color-bg-main);
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2rem;
-    
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -37,7 +39,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: clamp(0.5rem, 1vw, 5rem);
-    margin-left: 2%;
 }
 
 .leftSideBar h1 {
@@ -98,6 +99,7 @@ hr {
     margin-left: 1rem;
     align-self: center;
     color: rgb(166, 162, 162);
+    font-size: clamp(0.8rem, 0.9vw, 1.5rem);
 }
 
 h4 {
@@ -181,6 +183,57 @@ a {
     font-weight: 600;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    gap: 0.4rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.hamburger span {
+    width: 2.5rem;
+    height: 0.3rem;
+    background-color: var(--color-accent);
+    border-radius: 0.2rem;
+    transition: all 0.3s ease;
+    
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(0.8rem, 0.8rem);
+    z-index: 17;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(0.8rem, -0.8rem);
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 13;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
 .topBar {
     display: flex;
     width: 100%;
@@ -195,11 +248,11 @@ a {
 .topBar .personalInfo,
 .topBar .personalInfo div {
     align-items: center;
-    justify-content: center;
+    justify-content: center;;
 }
 
 .topBar .personalInfo img {
-    width: 5%;
+    width: 9%;
 }
 
 a:hover {
@@ -485,7 +538,7 @@ a:hover {
     grid-template-columns: 2fr 1fr 1fr;
     gap: 2rem;
     padding: 2rem;
-    width: 95%;
+    width: 96%;
     margin: 0.5% 2% 1% 2%;
     background-color: var(--color-bg-card);
     border-radius: 1rem;
@@ -554,12 +607,137 @@ a:hover {
 @media (max-width: 1100px) {
     .leftSideBar {
         display: none;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--color-bg-card);
+        z-index: 14;
+        flex-direction: column;
+        overflow-y: auto;
+        transition: left 0.3s ease;
     }
+    
+    .leftSideBar.active {
+        display: flex;
+        left: 0;
+        width: clamp(15rem, 70vw, 35rem);
+    }
+
+    h4 {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+    }
+
+    .skill span {
+        font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    }
+
+    .contact-item span a {
+        font-size: clamp(0.8rem, 1.4vw, 1.5rem);
+    }
+    
+    .hamburger {
+        display: flex;
+        position: absolute;
+    }
+
     .container {
         flex-direction: column;
     }
+
     .topBar {
         display: flex;
+        position: relative;
+    }
+
+    .mainPage {
+        width: 100%;
+        margin: 0;
+    }
+
+    .backgroundImg {
+        margin: 0 0 0 0;
+        height: clamp(15rem, 28vw, 30rem);
+    }
+
+    .myWork {
+        width: 97%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .about-section {
+        width: 97%;
+        margin: 0.5% 2% 1% 0;
+    }
+
+    .topBar .profileHeader {
+        position: absolute;
+        margin: 0 0 0 9%;
+        z-index: 2;
+    }
+
+    .profileHeader img {
+        width: clamp(10rem, 16vw, 20rem);
+        height: clamp(10rem, 16vw, 20rem);
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0;
+    }
+
+    .topBar .personalInfo {
+        position: absolute;
+        width: 20%;
+        margin: 16% 0 0 7%;
+    }
+
+    .personalInfo {
+        font-size: clamp(0.8rem, 1.4vw, 2rem);
+    }
+    
+    .personalInfo div span {
+        font-size: clamp(0.7rem, 1.2vw, 1.5rem);
+    }
+
+    .personalInfo h1 {
+        font-size: clamp(1.5rem, 2.5vw, 3rem);
+        color: black;
+    }
+
+    .topBar .personalInfo div {
+        margin: -5% 0 0 0;
+    }
+
+    .topBar {
+        position: absolute;
+        z-index: 2;
+        background: transparent;
+        flex-direction: column;
+    }
+
+    .mainPage h1 {
+        position: absolute;
+        margin: 8% 0 0 40%;
+    }
+
+    .mainPage__text {
+        position: absolute;
+        margin: 12% 0 0 41%;
+    }
+
+    .download {
+        position: absolute;
+        margin: 15% 0 0 41%;
+        width: clamp(0.7rem, 12%, 30rem);
+    }
+    
+    .rest h2 {
+        font-size: clamp(1rem, 2vw, 3rem);
+    }
+
+    .project-card h3 {
+        font-size: clamp(1.2rem, 1.6vw, 3rem);
     }
 }
 
@@ -567,15 +745,320 @@ a:hover {
     .myWork {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .about-section {
         grid-template-columns: 1fr;
+    }
+
+    .profileHeader img {
+        width: clamp(8rem, 25vw, 20rem);
+        height: clamp(8rem, 25vw, 20rem);
+    }
+
+    .hamburger span {
+        width: 3rem;
+        height: 0.5rem;
+    }
+
+    .topBar .profileHeader {
+        margin: 0 0 0 10%;
+    }
+
+    .topBar .personalInfo{
+        margin: 25% 0 0 6%;
+        width: 30%;
+        flex: 0 0 auto;
+        text-align: flex-start;
+    }
+
+    .topBar .personalInfo div {
+        margin: 0;
+    }
+
+    .personalInfo div span {
+        font-size: clamp(0.8rem, 2vw, 2rem);
+    }
+
+    .topBar .personalInfo div span {
+        font-size: clamp(0.8rem, 1.8vw, 2rem);
+    }
+    
+
+    .personalInfo h1 {
+        font-size: clamp(1.5rem, 3.8vw, 4rem);
+        width: 100%;
+        margin: 0 0 0 25%;
+    }
+
+    .topBar .personalInfo h1 {
+        
+        margin: 0 0 0 10%;
+    }
+
+    .contact-item span a {
+        font-size: clamp(0.8rem, 2.2vw, 2rem);
+    }
+
+    .skill span {
+        font-size: clamp(0.8rem, 2vw, 3rem);
+    }
+    
+    h4 {
+        font-size: clamp(1rem, 2.5vw, 3rem);
+    }
+
+    .personalInfo p {
+        font-size: clamp(1rem, 2.8vw, 3rem);
+        margin: 2% 0 0 0;
+    }
+
+    .backgroundImg {
+        height: clamp(15rem, 45vw, 38rem);
+    }
+
+    .mainPage h1 {
+        margin: 9% 0 0 45%;
+        font-size: clamp(2rem, 4.8vw, 5rem);
+    }
+
+    .mainPage__text {
+        margin: 16% 0 0 47%;
+        font-size: clamp(1rem, 2.5vw, 3rem);
+    }
+
+    .download {
+        margin: 22% 0 0 47%;
+        width: clamp(0.7rem, 15%, 30rem);
+    }
+
+    .rest h2 {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    .project-card h3 {
+        font-size: clamp(1.2rem, 2.4vw, 4rem);
+    }
+
+    .project-tags span {
+        font-size: clamp(0.8rem, 1.5vw, 2rem);
+    }
+
+    .project-card p {
+        font-size: clamp(1rem, 2vw, 2rem);
+    }
+
+    .window-tag {
+        font-size: clamp(0.9rem, 1.8vw, 2rem);
+    }
+
+    #projectFullDesc {
+        font-size: clamp(1rem, 2vw, 2.5rem);
+    }
+
+    .project-link {
+        font-size: clamp(1rem, 2vw, 2.5rem);
     }
 }
 
 @media (max-width: 600px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100dvh;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
 
+    .backgroundImg {
+        height: clamp(15rem, 40vw, 30rem);
+    }
+
+    .profileHeader img {
+        width: clamp(8rem, 30vw, 30rem);
+        height: clamp(8rem, 30vw, 30rem);
+    }
+
+    .topBar .personalInfo {
+        margin: 30% 0 0 5%;
+        width: 40%;
+        font-size: clamp(1rem, 2vw, 4rem);
+    }
+
+    .mainPage h1 {
+        margin: 10% 0 0 10%;
+        font-size: clamp(2rem, 5vw, 5rem);
+    }
+
+    .mainPage__text {
+        margin: 18% 0 0 12%;
+        font-size: clamp(1rem, 2.5vw, 3rem);
+    }
+
+    .download {
+        margin: 24% 0 0 12%;
+        width: clamp(0.7rem, 20%, 40rem);
+        font-size: clamp(1rem, 2vw, 3rem);
+    }
+
+    .topBar .personalInfo{
+        margin: 8% 0 0 40%;
+    }
+
+    .personalInfo div span {
+        font-size: clamp(0.9rem, 1.6vw, 2.5rem);
+    }
+
+    .emptySpaceOnTop {
+        height: clamp(15rem, 35vw, 30rem);
+    }
+
+    .topBar .personalInfo p {
+
+        margin: 2% 0 0 30%;
+    }
+
+    .personalInfo p {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    .topBar .personalInfo div {
+        margin: 2% 0 0 25%;
+    }
+
+    .personalInfo div span {
+        font-size: clamp(0.8rem, 2.5vw, 2.5rem);
+    }
+
+    .topBar .personalInfo h1 {
+        margin: 0 0 0 35%;
+    }
+
+    .personalInfo h1 {
+        font-size: clamp(1.5rem, 5vw, 4rem);
+        margin: 0 0 0 20%;
+        width: 100%;
+    }
+
+    .skills h4,
+    .contact h4 {
+        font-size: clamp(1rem, 3vw, 3rem);
+    }
+
+    .skill__top span {
+        font-size: clamp(0.8rem, 2.5vw, 3rem);
+    }
+
+    .contact-item span a {
+        font-size: clamp(0.8rem, 3vw, 3rem);
+    }
+
+    .rest h2 {
+        font-size: clamp(1rem, 4vw, 4rem);
+    }
+
+    .project-window h2 {
+        font-size: clamp(1.5rem, 4vw, 5rem);
+    }
+
+    .project-card h3 {
+        font-size: clamp(1.2rem, 3.7vw, 4rem);
+    }
+
+    .project-tags span {
+        font-size: clamp(0.8rem, 2.5vw, 3rem);
+    }
+
+    .project-card p {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    .window-tag {
+        font-size: clamp(0.9rem, 3vw, 4rem);
+    }
+
+    #projectFullDesc {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    .project-link {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    .project-btn {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    
 }
 
 @media (max-width: 420px) {
+    .container {
+        width: 170%;
+    }
+
+    .backgroundImg {
+        height: clamp(15rem, 45vw, 30rem);
+    }
+
+    .profileHeader img {
+        width: clamp(8rem, 30vw, 40rem);
+        height: clamp(8rem, 30vw, 40rem);
+        margin: 10% 0 0 0;
+    }
+
+    .personalInfo h1 {
+        font-size: clamp(1.5rem, 5vw, 5rem);
+        margin: 0 0 0 25%;
+    }
+
+    .topBar .personalInfo h1 {
+        margin: 5% 0 0 35%;
+    }
+
+    .mainPage h1 {
+        margin: 15% 0 0 10%;
+        width: 70%;
+        font-size: clamp(2rem, 5vw, 6rem);
+    }
+
+    .mainPage__text {
+        margin: 25% 0 0 12%;
+        width: 70%;
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    .download {
+        margin: 32% 0 0 12%;
+        width: clamp(0.7rem, 20%, 40rem);
+    }
+    
+    .rest-content h2 {
+        font-size: clamp(1rem, 4vw, 5rem);
+    }
+
+    .rest h2 {
+        margin: 1rem 1rem;
+        font-size: clamp(1rem, 5vw, 5rem);  
+    }
+
+    .project-card h3 {
+        font-size: clamp(1.2rem, 4vw, 5rem);
+    }
+
+    .project-card p {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    .window-tag {
+        font-size: clamp(0.9rem, 3vw, 4rem);
+    }
+    
+    #projectFullDesc {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }
+
+    .project-link {
+        font-size: clamp(1rem, 3vw, 4rem);
+    }   
 
 }
