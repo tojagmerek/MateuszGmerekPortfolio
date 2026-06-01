@@ -348,7 +348,7 @@ a:hover {
     overflow-y: auto;
     align-content: flex-start;
     width: 95%;
-    padding: 1% 0 0 2%;
+    padding: 2%;
 }
 
 .project-card {
@@ -365,7 +365,7 @@ a:hover {
 }
 
 .project-card:hover {
-    transform: translateY(-0.5rem);
+    transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 

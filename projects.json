@@ -2,19 +2,18 @@
     "projects": [
         {
             "name": "project5",
-            "title": "Portfel Crypto",
-            "shortDesc": "Prosty portfel kryptowalutowy z funkcją śledzenia cen i zarządzania aktywami.",
-            "fullDesc": "Intuicyjny portfel do przechowywania i zarządzania kryptowalutami. Umożliwia dodawanie różnych walut, śledzenie ich wartości w czasie rzeczywistym.",
+            "title": "Panel Portfela Kryptowalutowego",
+            "shortDesc": "Projekt interfejsu aplikacji do monitorowania portfela kryptowalutowego, z dashboardem, historią transakcji i widokami zarządzania kontem.",
+            "fullDesc": "Projekt UI aplikacji do monitorowania portfela kryptowalutowego. Obejmuje dashboard z podsumowaniem wartości portfela, widok aktywów, historię transakcji, statystyki wyników oraz ekrany związane z logowaniem, rejestracją i odzyskiwaniem hasła. W projekcie uwzględniono także ustawienia użytkownika, wybór języka i waluty, dodawanie oraz edycję transakcji, import danych z pliku i wyszukiwarkę. Całość została zaprojektowana jako rozbudowany prototyp w Figmie, skupiony na czytelnym układzie, prostym przepływie użytkownika i wygodnym zarządzaniu informacjami o aktywach.",
             "image": "assets/img/5.png",
             "webUrl": "https://www.figma.com/site/EqZ6fszMnzDXGyzAkKJB3n/CoinScope?node-id=0-1&t=GCQAkTKGzDdpQkVq-1",
-            
             "tags": ["Figma"]
         },
         {
             "name": "project4",
-            "title": "Generator Zaproszeń (Work in Progress)",
-            "shortDesc": "Zaawansowany generator zaproszeń PDF z modułową personalizacją szablonów i panelem do zarządzania gośćmi.",
-            "fullDesc": "Elegancka aplikacja do tworzenia spersonalizowanych zaproszeń na wszelkie wydarzenia. Możesz dodawać gości w grupach, automatycznie wyliczać liczbę uczestników, wybierać i edytować szablony, zmieniać czcionki oraz kolory. Generuje gotowe do druku PDF-y z winietkami i kartkami podziękowań.",
+            "title": "Generator Zaproszeń",
+            "shortDesc": "Front-endowy prototyp generatora zaproszeń z wyborem szablonów, konfiguracją wydarzenia oraz panelem do zarządzania gośćmi.",
+            "fullDesc": "Prototyp aplikacji do personalizowania zaproszeń, winietek i podziękowań. Użytkownik może wybrać typ materiałów, uzupełnić dane wydarzenia, dodawać gości w grupach oraz sprawdzić podsumowanie liczby elementów. Interfejs umożliwia wybór szablonu i wariantu czcionki, symulując proces konfiguracji gotowych materiałów. Projekt jest obecnie rozwijany jako front-end aplikacji, a backend do generowania plików PDF jest planowany w kolejnym etapie.",
             "image": "assets/img/3.png",
             "webUrl": "https://tojagmerek.github.io/invitation_generator/",
             "gitUrl": "https://github.com/tojagmerek/invitation_generator",
@@ -23,8 +22,8 @@
         {
             "name": "project3",
             "title": "Aktualne Portfolio",
-            "shortDesc": "Nowoczesne, responsywne portfolio z interaktywnymi modułami i dbałością o każdy detal.",
-            "fullDesc": "Moje aktualne portfolio zbudowane z wykorzystaniem CSS Grid i Flexbox. Prezentuje projekty, umiejętności oraz dane kontaktowe w estetyczny i przejrzysty sposób. W pełni responsywne na wszystkich urządzeniach – od telefonu po ultra-szerokie monitory. Zawiera interaktywne okna modalne do szczegółowego przeglądania prac.",
+            "shortDesc": "Aktualna wersja mojego portfolio z interaktywnymi kafelkami projektów, szczegółowymi oknami modalnymi i układem dopasowanym do różnych ekranów.",
+            "fullDesc": "Aktualna wersja mojego portfolio służąca do prezentacji projektów, umiejętności i danych kontaktowych. Projekty są pokazane jako interaktywne kafelki, które po kliknięciu otwierają okno modalne z większym podglądem, opisem, tagami oraz linkami. Dane projektów są przechowywane w JSON, co ułatwia ich edycję i dodawanie kolejnych pozycji. Strona została przygotowana w responsywnym układzie, dopasowanym zarówno do małych ekranów mobilnych, jak i szerokich monitorów.",
             "image": "assets/img/4.png",
             "webUrl": "https://tojagmerek.github.io/portfolio",
             "gitUrl": "https://github.com/tojagmerek/Portfolio",
@@ -33,8 +32,8 @@
         {
             "name": "project2",
             "title": "Planner Budowy Postaci Gothic 2",
-            "shortDesc": "Interaktywny kalkulator postaci do Gothic 2 z autentycznym UI prosto z gry.",
-            "fullDesc": "Symulator rozwoju postaci w kultowej grze Gothic 2. Przydzielaj punkty do atrybutów, wybieraj umiejętności i ekwipunek, a aplikacja natychmiast przelicza wszystkie statystyki (obrażenia, ochrona, szanse na cios krytyczny itp.). Interfejs wiernie odwzorowuje klimat oryginału. Cała logika napisana w JavaScripcie z danymi przechowywanymi w JSON.",
+            "shortDesc": "Interaktywny planner postaci inspirowany Gothic 2, pozwalający rozwijać atrybuty, umiejętności i na bieżąco przeliczać statystyki bohatera.",
+            "fullDesc": "Interaktywny planner rozwoju postaci inspirowany grą Gothic 2. Aplikacja pozwala przydzielać punkty nauki, rozwijać atrybuty, wybierać umiejętności oraz sprawdzać wpływ zmian na statystyki bohatera. Po każdej akcji wartości są przeliczane na bieżąco, dzięki czemu można szybko porównać różne warianty budowy postaci. Projekt skupia się na logice obliczeń, pracy z danymi oraz odtworzeniu klimatu klasycznego interfejsu RPG. (Aktualnie jest rozwijany o nowe funkcje i poprawki wizualne.)",
             "image": "assets/img/2.png",
             "webUrl": "https://tojagmerek.github.io/GothicBuild/",
             "gitUrl": "https://github.com/tojagmerek/GothicBuild",
@@ -43,8 +42,8 @@
         {
             "name": "project1",
             "title": "Pierwsze Portfolio",
-            "shortDesc": "Moje pierwsze responsywne portfolio – projekt zaliczeniowy z Aplikacji Internetowych.",
-            "fullDesc": "Pierwsze portfolio stworzone na zaliczenie przedmiotu Aplikacje Internetowe. Prosty, ale elegancki layout w czystym HTML i CSS. Zawiera sekcje z danymi osobowymi, umiejętnościami i projektami. Pełna responsywność na wszystkich urządzeniach – pokazuje moje pierwsze kroki w web development.",
+            "shortDesc": "Prosta strona portfolio/CV prezentująca podstawowe informacje, umiejętności oraz projekty w czytelnym, minimalistycznym układzie.",
+            "fullDesc": "Statyczna strona portfolio/CV przygotowana jako osobista wizytówka internetowa. Zawiera krótki opis autora, zainteresowania, sekcję umiejętności oraz miejsce na prezentację projektów. Układ jest prosty i uporządkowany, z naciskiem na czytelność, spokojną kolorystykę i przejrzysty podział treści. Strona została dostosowana do popularnych rozdzielczości, takich jak laptopy, tablety i większe urządzenia mobilne.",
             "image": "assets/img/1.png",
             "webUrl": "https://tojagmerek.github.io/FirstPortfolio/",
             "gitUrl": "https://github.com/tojagmerek/FirstPortfolio",
